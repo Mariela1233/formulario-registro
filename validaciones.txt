@@ -1,0 +1,7 @@
+VALIDACIÓN DEL FORMULARIO
+
+- El nombre es obligatorio.
+- El correo electrónico es obligatorio.
+- La contraseña es obligatoria.
+- El correo debe tener un formato válido.
+- La contraseña debe contener como mínimo 8 caracteres.
