@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .formulario {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #1f6feb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1557b0;
+        }
+
+        #mensaje {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="formulario">
+    <h2>Registro de Usuario</h2>
+
+    <form id="registroForm">
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <p id="mensaje"></p>
+</div>
+
+<script>
+document.getElementById("registroForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+    let correo = document.getElementById("correo").value;
+    let password = document.getElementById("password").value;
+    let mensaje = document.getElementById("mensaje");
+
+    if (nombre === "" || correo === "" || password === "") {
+        mensaje.textContent = "Todos los campos son obligatorios.";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    if (password.length < 8) {
+        mensaje.textContent = "La contraseña debe tener mínimo 8 caracteres.";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    mensaje.textContent = "Registro realizado correctamente.";
+    mensaje.style.color = "green";
+});
+</script>
+
+</body>
+</html>
