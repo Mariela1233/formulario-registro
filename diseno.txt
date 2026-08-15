@@ -1,0 +1,7 @@
+DISEÑO DEL FORMULARIO
+
+- Formulario centrado en pantalla.
+- Botón Registrar destacado.
+- Campos correctamente alineados.
+- Diseño adaptable a diferentes pantallas.
+- Mensajes de error visibles para el usuario.
