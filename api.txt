@@ -1,0 +1,7 @@
+CONEXIÓN CON API
+
+- Recibir los datos ingresados en el formulario.
+- Preparar nombre, correo y contraseña.
+- Enviar los datos mediante una solicitud HTTP.
+- Recibir la respuesta de la API.
+- Mostrar mensaje de registro exitoso o error.
